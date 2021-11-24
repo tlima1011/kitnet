@@ -1,3 +1,64 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
+class Imovel(models.Model):
+
+    TIPO_CONTRATO_CHOICES = (
+        ('A', 'Aluguel'),
+        ('V', 'Venda')
+    )
+
+    CONDICAO_CHOICES =(
+        ("U", 'Usado'),
+        ("N", 'Novo')
+    )
+    nome = models.CharField(max_length=50, null=False, blank=False,verbose_name='Nome')
+    endereco = models.CharField(max_length=40, null=False, blank=False, verbose_name='Endereço')
+    cep = models.CharField(max_length=7, null=False, blank=False, verbose_name='CEP')
+    metros = models.FloatField(verbose_name='Metros')
+    dormitorios = models.IntegerField(verbose_name='Dormitórios')
+    banheiros = models.IntegerField(verbose_name='Banheiros')
+    garagem = models.CharField(max_length=1,null=False,verbose_name='Garagem')
+    vagas_garagem = models.IntegerField(verbose_name='Vagas na Garagem')
+    varanda = models.CharField(max_length=1, null=False, verbose_name='Varanda')
+    data_inclusao = models.DateTimeField(auto_now=True, verbose_name='Data Inclusao')
+    tipo_contrato =  models.CharField(max_length=1, choices=TIPO_CONTRATO_CHOICES, blank=False, null=False, verbose_name='Tipo Contrato')
+    cidade = models.CharField(max_length=50, null=False, blank=False, verbose_name='Cidade')
+    estado = models.CharField(max_length=2, null=False, blank=False, verbose_name='Estado')
+    valor = models.DecimalField(max_digits=10, decimal_places=2)
+    condicao = models.CharField(max_length=1, choices=CONDICAO_CHOICES, verbose_name='Condição')
+    #cliente = models.ForeignKey('Cliente', on_delete=models.CASCADE, related_name='cliente')
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'imovel'
+
+    def __str__(self):
+        return self.nome
+
+
+class Cliente(models.Model):
+    nome = models.CharField(max_length=50, null=False, blank=False)
+    endereco = models.CharField(max_length=40, null=False, blank=False)
+    email = models.EmailField(max_length=20)
+    telefone = models.CharField(max_length=9)
+    data_nascimento = models.DateTimeField(verbose_name='Data de Nascimento')
+    data_cadastro = models.DateTimeField(auto_now=True, verbose_name='Data Cadastrado')
+    imovel = models.OneToOneField(Imovel, on_delete=models.SET_NULL, null=True)
+    usuario = models.ForeignKey( User, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'cliente'
+
+    def __str__(self):
+        return self.nome
+
+
+
+
+
+
+
+
+
