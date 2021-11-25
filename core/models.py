@@ -74,13 +74,16 @@ class Imovel(models.Model):
     def __str__(self):
         return self.nome
 
+
+
+
 class Cliente(models.Model):
     nome = models.CharField(max_length=50, null=False, blank=False)
     endereco = models.CharField(max_length=40, null=False, blank=False)
     email = models.EmailField(max_length=20)
     telefone = models.CharField(max_length=9)
     data_nascimento = models.DateTimeField(verbose_name='Data de Nascimento')
-    data_cadastro = models.DateTimeField(auto_now=True, verbose_name='Data Cadastrado')
+    data_cadastro = models.DateTimeField(auto_now=True, verbose_name='Data de Inclusão')
     imovel = models.ForeignKey(Imovel, on_delete=models.SET_NULL, null=True)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
