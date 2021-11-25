@@ -74,7 +74,8 @@ class Imovel(models.Model):
     def __str__(self):
         return self.nome
 
-
+    def get_data_inclusao(self):
+        return self.data_inclusao.strftime('%d,%M,%y')
 
 
 class Cliente(models.Model):
@@ -93,7 +94,11 @@ class Cliente(models.Model):
     def __str__(self):
         return self.nome
 
+    def get_data_nascimento(self):
+        return self.data_nascimento.strftime('%d,%m,%Y')
 
+    def get_data_cadastro(self):
+        return self.data_cadastro.strftime('%d,%M,%Y')
 
 
 
