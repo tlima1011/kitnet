@@ -1,0 +1,9 @@
+{% extends "model-page.html"%}
+{% block content%}
+    <h2>Imoveis Cadastrados</h2>
+    <ul style="font-size: 18px">
+        {% for im in imovel %}
+            <li>{{ im.nome }} - {{ im.get_data_inclusao}}</li>
+        {% endfor%}
+    </ul>
+{% endblock%}

@@ -75,7 +75,7 @@ class Imovel(models.Model):
         return self.nome
 
     def get_data_inclusao(self):
-        return self.data_inclusao.strftime('%d,%M,%y')
+        return self.data_inclusao.strftime('%d/%m/%Y %H %M Hrs')
 
 
 class Cliente(models.Model):
@@ -95,10 +95,10 @@ class Cliente(models.Model):
         return self.nome
 
     def get_data_nascimento(self):
-        return self.data_nascimento.strftime('%d,%m,%Y')
+        return self.data_nascimento.strftime('%d/%m/%Y')
 
     def get_data_cadastro(self):
-        return self.data_cadastro.strftime('%d,%M,%Y')
+        return self.data_cadastro.strftime('%d/%M/%Y')
 
 
 
