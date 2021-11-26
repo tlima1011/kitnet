@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Kitnet</title>
+</head>
+<body>
+    <h1>Login para logar</h1>
+    <form action="submit" method="POST"> {% csrf_token %}
+        <div align="center">
+            <label>Usuario: </label>
+            <input type="text" name="username">
+            <label>Senha: </label>
+            <input type="password" name="password">
+            <button type="submit">Entrar</button>
+            <button type="reset">Reiniciar</button>
+        </div>
+    </form>
+    <br>
+    {% for message in messages %}
+        <div align="center" >
+            <strong>Erro: </strong>{{ message }}
+        </div>
+    {% endfor %}
+    {%include "model-footer.html" %}
+</body>
+</html>

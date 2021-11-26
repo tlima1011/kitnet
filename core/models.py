@@ -10,12 +10,12 @@ class Imovel(models.Model):
         ('V', 'Venda')
     )
 
-    CONDICAO_CHOICES =(
+    CONDICAO_CHOICES = (
         ("U", 'Usado'),
         ("N", 'Novo')
     )
 
-    SIMNAO_CHOICES =(
+    SIMNAO_CHOICES = (
         ('S', 'Sim'),
         ('N', 'Nao')
     )
@@ -50,14 +50,14 @@ class Imovel(models.Model):
         ("TO", 'Tocantins')
     )
 
-    nome = models.CharField(max_length=50, null=False, blank=False,verbose_name='Nome')
+    nome = models.CharField(max_length=50, null=False, blank=False, verbose_name='Nome')
     endereco = models.CharField(max_length=40, null=False, blank=False, verbose_name='Endereço')
     cep = models.CharField(max_length=7, null=False, blank=False, verbose_name='CEP')
     metros = models.FloatField(verbose_name='Metros')
     dormitorios = models.IntegerField(verbose_name='Dormitórios')
     banheiros = models.IntegerField(verbose_name='Banheiros')
     garagem = models.CharField(max_length=1, choices=SIMNAO_CHOICES, verbose_name='Garagem')
-    vagas_garagem = models.IntegerField(verbose_name='Vagas na Garagem',null=True)
+    vagas_garagem = models.IntegerField(verbose_name='Vagas na Garagem', null=True)
     varanda = models.CharField(max_length=1, choices=SIMNAO_CHOICES, verbose_name='Varanda')
     image1 = models.ImageField(upload_to='templates/images', verbose_name='Imagem 1', null=True, blank=True )
     image2 = models.ImageField(upload_to='templates/images', verbose_name='Imagem 2', null=True, blank=True )
@@ -80,7 +80,7 @@ class Imovel(models.Model):
         return self.nome
 
     def get_data_inclusao(self):
-        return self.data_inclusao.strftime('%d/%m/%Y %H %M Hrs')
+        return self.data_inclusao.strftime('%d/%m/%Y %H:%M hrs')
 
 
 class Cliente(models.Model):
