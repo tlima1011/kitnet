@@ -2,6 +2,8 @@ from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
+
+
 class Imovel(models.Model):
     TIPO_CONTRATO_CHOICES = (
         ('A', 'Aluguel'),
