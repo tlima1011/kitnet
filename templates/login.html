@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Sistema Kitnet</title>
+    <link rel="shortcut icon" href="{% static 'images/icone-kitnet.png' %}"/>
 </head>
 <body>
-    <h1>Login para logar</h1>
     <form action="submit" method="POST"> {% csrf_token %}
         <div align="center">
-            <label>Usuario: </label>
-            <input type="text" name="username">
-            <label>Senha: </label>
-            <input type="password" name="password">
+            <h1><i>Login</i></h1>
+            <hr>
+            <table style="font-size: 20px">
+                <tr>
+                    <td>Usuario:</td>
+                    <td>
+                        <input type="text" name="username" maxlength="20" placeholder="Informe seu login">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Senha:</td>
+                    <td>
+                        <input type="password" name="password" maxlength="15" placeholder="Informe sua senha">
+                    </td>
+                </tr>
+                <br>
+                <br>
+            </table>
             <button type="submit">Entrar</button>
             <button type="reset">Reiniciar</button>
         </div>
