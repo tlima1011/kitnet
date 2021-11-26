@@ -2,8 +2,6 @@ from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-
-
 class Imovel(models.Model):
     TIPO_CONTRATO_CHOICES = (
         ('A', 'Aluguel'),
@@ -59,8 +57,13 @@ class Imovel(models.Model):
     garagem = models.CharField(max_length=1, choices=SIMNAO_CHOICES, verbose_name='Garagem')
     vagas_garagem = models.IntegerField(verbose_name='Vagas na Garagem',null=True)
     varanda = models.CharField(max_length=1, choices=SIMNAO_CHOICES, verbose_name='Varanda')
+    image1 = models.ImageField(upload_to='templates/images', verbose_name='Imagem 1', null=True, blank=True )
+    image2 = models.ImageField(upload_to='templates/images', verbose_name='Imagem 2', null=True, blank=True )
+    image3 = models.ImageField(upload_to='templates/images', verbose_name='Imagem 3', null=True, blank=True )
+    image4 = models.ImageField(upload_to='templates/images', verbose_name='Imagem 4', null=True, blank=True )
+    image5 = models.ImageField(upload_to='templates/images', verbose_name='Imagem 5', null=True, blank=True )
     data_inclusao = models.DateTimeField(auto_now=True, verbose_name='Data Inclusao')
-    tipo_contrato =  models.CharField(max_length=1, choices=TIPO_CONTRATO_CHOICES, blank=False, null=False, verbose_name='Tipo Contrato')
+    tipo_contrato = models.CharField(max_length=1, choices=TIPO_CONTRATO_CHOICES, blank=False, null=False, verbose_name='Tipo Contrato')
     cidade = models.CharField(max_length=50, null=False, blank=False, verbose_name='Cidade')
     estado = models.CharField(max_length=2, choices=ESTADO_CHOICES, blank=False, verbose_name='Estado')
     valor = models.DecimalField(max_digits=10, decimal_places=2)
