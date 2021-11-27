@@ -1,5 +1,5 @@
 h1{
-    font-family: "verdana";
+    font-family: "Montserrat", "Arial", "sans-serif";
 }
 
 footer{
@@ -41,6 +41,36 @@ table, td, tr{
   border: 2px solid #FFC0CB;
   font-weight: bold;
 }
+
+.button2 {
+  background-color: #FFEFD5;
+  color: black;
+  border: 2px solid #FFC0CB;
+}
+
+.button2:hover {
+  background-color: #FA8072;
+  color: black;
+  border: 2px solid #FFC0CB;
+  font-weight: bold;
+}
+
+a {
+  color: blue;
+  font-family: "Verdana";
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+
+}
+
+a:hover {
+  color: rgba(255, 99, 71);
+  text-decoration: underline;
+}
+
 
 
 
