@@ -1,0 +1,46 @@
+h1{
+    font-family: "verdana";
+}
+
+footer{
+    background-color: hsla(0, 100%, 90%, 0.3);
+    font-family: "Montserrat", "Arial", "sans-serif";
+    font-size: 16px;
+}
+
+table, td, tr{
+   font-family: "Verdade", "Arial", "sans-serif";
+   font-size: 18px;
+}
+
+.button {
+  background-color: #FFFFE0; /* Green */
+  border: none;
+  color: black;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Verdana"
+  display: inline-block;
+  font-size: 17px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button1 {
+  background-color: #FFEFD5;
+  color: black;
+  border: 2px solid #FFC0CB;
+}
+
+.button1:hover {
+  background-color: #FA8072;
+  color: black;
+  border: 2px solid #FFC0CB;
+  font-weight: bold;
+}
+
+
+

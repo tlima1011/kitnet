@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 <body>
+    <img src="{% static 'images/logo-kitnet.jpg'%}" alt="Icone" width="300" height="50">
     <form action="submit" method="POST"> {% csrf_token %}
         <div align="center">
             <h1><i>Login</i></h1>
@@ -28,8 +29,8 @@
                 <br>
                 <br>
             </table>
-            <button type="submit">Entrar</button>
-            <button type="reset">Reiniciar</button>
+            <button type="submit" class="button button1">Entrar</button>
+            <button type="reset" class="button2">Reiniciar</button>
         </div>
     </form>
     <br>

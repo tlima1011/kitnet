@@ -52,6 +52,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'kitnet.urls'
 
+STATICFILES_DIRS = [
+     os.path.join(BASE_DIR, 'static'),
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
