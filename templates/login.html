@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <title>Sistema</title>
     <link rel="shortcut icon" href="{% static 'images/icone-kitnet.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 <body>
-    <img src="{% static 'images/logo-kitnet.jpg'%}" alt="Logotipo da Kitnet" width="300" height="50">
+    <img src="{% static 'images/logo-kitnet.jpg'%}" alt="Logotipo da Kitnet">
     <form action="submit" method="POST"> {% csrf_token %}
         <div align="center">
             <h1><i>Login</i></h1>
             <hr>
             <table style="font-size: 20px">
                 <tr>
-                    <td>Usuario:</td>
+                    <td>Usuario</td>
                     <td>
                         <input type="text" name="username" maxlength="20" placeholder="Informe seu login">
                     </td>
                 </tr>
                 <tr>
-                    <td>Senha:</td>
+                    <td>Senha</td>
                     <td>
                         <input type="password" name="password" maxlength="15" placeholder="Informe sua senha">
                     </td>
