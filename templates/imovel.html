@@ -1,13 +1,18 @@
 {% extends "model-page.html"%}
 {% block content%}
-    <h2>Imoveis Cadastrados</h2>
-    <a href="cadastro/">
-        <button type="button">Novo Imóvel</button>
-    </a>
-    <ul style="font-size: 18px">
-        {% for im in imovel %}
-            <li>{{ im.nome }} - {{ im.get_data_inclusao}}</li>
-        {% endfor%}
-    </ul>
+    <div>
+        <a href="cadastro/">
+            <button type="button" class="button button1">Novo Imóvel</button>
+        </a>
+        <a href="novo_cliente/">
+            <button type="button" class="button button1">Novo Cliente</button>
+        </a>
+        <h2>Imoveis Cadastrados</h2>
+        <ul style="font-size: 18px">
+            {% for im in imovel %}
+                <li>{{ im.nome }} - {{ im.get_data_inclusao}}</li>
+            {% endfor%}
+        </ul>
+    </div>
     <!--{%include "model-footer.html" %}-->
 {% endblock%}

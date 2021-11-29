@@ -17,13 +17,19 @@ from django.contrib import admin
 from django.urls import path
 from core import views
 from django.views.generic import RedirectView
+from django.conf.urls.static import static
+from kitnet import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('imovel/', views.lista_imoveis),
     path('imovel/cadastro/', views.cadastro),
+    path('imovel/cadastro/submit', views.submit_cadastro_imovel),
+    path('imovel/novo_cliente/', views.cadastro_cliente),
     path('', RedirectView.as_view(url='/imovel/')),
     path('login/', views.login_user),
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user)
 ]
+if settings.DEBUG: # new
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

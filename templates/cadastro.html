@@ -73,61 +73,61 @@
                 <tr>
                     <td>Varanda</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="garage,">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="varanda">
                           <option value="Sim">Sim</option>
                           <option value="Não">Não</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                  <td>Foto1</td>
+                  <td>Foto 1</td>
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" id="formFile1">
+                      <input class="form-control" accept="image/*" type="file" id="formFile1" name="foto1">
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Foto2</td>
+                  <td>Foto 2</td>
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" id="formFile2">
+                      <input class="form-control" type="file" accept="image/*" id="formFile2" name="foto2">
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Foto3</td>
+                  <td>Foto 3</td>
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" id="formFile3">
+                      <input class="form-control" type="file" accept="image/*" id="formFile3" name="foto3">
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Foto4</td>
+                  <td>Foto 4</td>
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" id="formFile4">
+                      <input class="form-control" type="file" accept="image/*" id="formFile4" name="foto4">
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Foto5</td>
+                  <td>Foto 5</td>
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" id="formFile5">
+                      <input class="form-control" type="file" accept="image/*" id="formFile5" name="foto5">
                     </div>
                   </td>
                 </tr>
                 <tr>
                     <td>Tipo de Contrato</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="tipo_contrato">
                           <option value="Venda">Venda</option>
                           <option value="Aluguel">Aluguel</option>
                         </select>
@@ -136,7 +136,7 @@
                 <tr>
                     <td>Estado</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="uf">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="tipo_contrato">
                           <option value="SP">São Paulo</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
@@ -190,8 +190,11 @@
                 <br>
                 <br>
           </table>
-          <button type="submit" class="button button1">Salvar</button>
+          <button type="submit" class="button button1" onclick="alert('Imóvel salvo com sucesso!')">Salvar</button>
           <button type="reset" class="button button1">Reiniciar</button>
+            <a href="/">
+                <button type="button" class="button button1">Voltar</button>
+            </a>
         </div>
     </form>
 

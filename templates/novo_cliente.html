@@ -1,0 +1,61 @@
+{% extends "model-page.html" %}
+{% block content %}
+<form action="submit" method="POST"> {% csrf_token %}
+        <div align="center">
+          <h1>Cadastro de Cliente</h1>
+          <table style="font-size: 20px">
+                <tr>
+                    <td>Nome</td>
+                    <td>
+                        <input type="text" name="nome" maxlength="50" placeholder="Nome do Cliente">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Endereço</td>
+                    <td>
+                        <input type="text" name="endereco" maxlength="50" placeholder="Informe o endereco">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" name="email" maxlength="20" placeholder="Informe o e-mail">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Telefone</td>
+                    <td>
+                        <input type="text" name="telefone" maxlength="7" placeholder="Telefone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data de Nascimento</td>
+                    <td>
+                        <input type="date" name="data_nascimento">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Imovel</td>
+                    <div>
+                        <td>
+                            {% for imovel in imoveis %}
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="imovel.nome">
+                              <option value="{{imovel.nome}}">{{imovel.nome}}</option>
+                            </select>
+                            <!--<input type="text" name="imovel" value="{{imovel.nome}}">-->
+                        </td>
+                    </div>
+                    {% endfor%}
+                </tr>
+                <br>
+                <br>
+          </table>
+          <button type="submit" class="button button1" onclick="alert('Imóvel salvo com sucesso!')">Salvar</button>
+          <button type="reset" class="button button1">Reiniciar</button>
+            <a href="/">
+                <button type="button" class="button button1">Voltar</button>
+            </a>
+        </div>
+    </form>
+
+{% endblock %}
