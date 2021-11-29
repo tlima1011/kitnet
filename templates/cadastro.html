@@ -1,0 +1,136 @@
+{% extends "model-page.html" %}
+{% block content %}
+<form action="submit" method="POST"> {% csrf_token %}
+        <div align="center">
+          <h2>Cadastro de Imóveis</h2>
+          <table style="font-size: 20px">
+                <tr>
+                    <td>Nome</td>
+                    <td>
+                        <input type="text" name="nome" maxlength="40" placeholder="Nome do Edifício">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Endereço</td>
+                    <td>
+                        <input type="text" name="endereco" maxlength="50" placeholder="Informe o endereco">
+                    </td>
+                </tr>
+                <tr>
+                    <td>CEP</td>
+                    <td>
+                        <input type="text" name="cep" maxlength="7" placeholder="Informe o CEP">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Metros</td>
+                    <td>
+                        <input type="text" name="metros" maxlength="7" placeholder="Metros construídos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dormitórios</td>
+                    <td>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Banheiros</td>
+                    <td>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Garagem</td>
+                    <td>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                          <option value="Sim">Sim</option>
+                          <option value="Não">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vagas na Garagem</td>
+                    <td>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Varanda</td>
+                    <td>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                          <option value="Sim">Sim</option>
+                          <option value="Não">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Foto1</td>
+                  <td>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label"></label>
+                      <input class="form-control" type="file" id="formFile1">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Foto2</td>
+                  <td>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label"></label>
+                      <input class="form-control" type="file" id="formFile2">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Foto3</td>
+                  <td>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label"></label>
+                      <input class="form-control" type="file" id="formFile3">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Foto4</td>
+                  <td>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label"></label>
+                      <input class="form-control" type="file" id="formFile4">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Foto5</td>
+                  <td>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label"></label>
+                      <input class="form-control" type="file" id="formFile5">
+                    </div>
+                  </td>
+                </tr>
+                
+                <br>
+                <br>
+          </table>
+          <button type="submit" class="button button1">Salvar</button>
+          <button type="reset" class="button button1">Reiniciar</button>
+        </div>
+    </form>
+
+{% endblock %}

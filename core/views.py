@@ -35,3 +35,8 @@ def lista_imoveis(request):
     dados = {'imovel':imovel}
     return render(request, 'imovel.html', dados)
 
+
+@login_required(login_url='/login/')
+def cadastro(request):
+    return render(request, 'cadastro.html')
+
