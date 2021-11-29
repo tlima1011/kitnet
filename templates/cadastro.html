@@ -2,7 +2,7 @@
 {% block content %}
 <form action="submit" method="POST"> {% csrf_token %}
         <div align="center">
-          <h2>Cadastro de Imóveis</h2>
+          <h1>Cadastro de Imóveis</h1>
           <table style="font-size: 20px">
                 <tr>
                     <td>Nome</td>
@@ -31,7 +31,7 @@
                 <tr>
                     <td>Dormitórios</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="dormitorios">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -42,7 +42,7 @@
                 <tr>
                     <td>Banheiros</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="banheiros">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -53,7 +53,7 @@
                 <tr>
                     <td>Garagem</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="garagem">
                           <option value="Sim">Sim</option>
                           <option value="Não">Não</option>
                         </select>
@@ -62,7 +62,7 @@
                 <tr>
                     <td>Vagas na Garagem</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="vagas_garagem">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -73,7 +73,7 @@
                 <tr>
                     <td>Varanda</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="garage,">
                           <option value="Sim">Sim</option>
                           <option value="Não">Não</option>
                         </select>
@@ -136,7 +136,7 @@
                 <tr>
                     <td>Estado</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="uf">
                           <option value="SP">São Paulo</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
@@ -169,19 +169,19 @@
                 <tr>
                     <td>Cidade</td>
                     <td>
-                        <input type="text" name="cidade" maxlength="40" placeholder="Cidade">
+                        <input type="text" name="cidade" maxlength="40" placeholder="Cidade" name="cidade">
                     </td>
                 </tr>
                 <tr>
                     <td>Valor</td>
                     <td>
-                        <input type="number" name="valor" maxlength="40" placeholder="Valor em R$">
+                        <input type="number" name="valor" maxlength="40" placeholder="Valor em R$" name="valor">
                     </td>
                 </tr>
                 <tr>
-                    <td>Valor</td>
+                    <td>Condição</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="codicao">
                           <option value="novo">Novo</option>
                           <option value="usado">Usado</option>
                         </select>
