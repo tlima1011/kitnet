@@ -32,10 +32,10 @@
                     <td>Dormitórios</td>
                     <td>
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="dormitorios">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
+                          <option value="1" name="dormitorios">1</option>
+                          <option value="2" name="dormitorios">2</option>
+                          <option value="3" name="dormitorios">3</option>
+                          <option value="4" name="dormitorios">4</option>
                         </select>
                     </td>
                 </tr>
@@ -43,10 +43,10 @@
                     <td>Banheiros</td>
                     <td>
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="banheiros">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
+                          <option value="1" name="banheiros">1</option>
+                          <option value="2" name="banheiros">2</option>
+                          <option value="3" name="banheiros">3</option>
+                          <option value="4" name="banheiros">4</option>
                         </select>
                     </td>
                 </tr>
@@ -54,8 +54,8 @@
                     <td>Garagem</td>
                     <td>
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="garagem">
-                          <option value="Sim">Sim</option>
-                          <option value="Não">Não</option>
+                          <option value="S" name="garagem">Sim</option>
+                          <option value="N" name="garagem">Não</option>
                         </select>
                     </td>
                 </tr>
@@ -63,10 +63,10 @@
                     <td>Vagas na Garagem</td>
                     <td>
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="vagas_garagem">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
+                          <option value="1" name="vagas_garagem">1</option>
+                          <option value="2" name="vagas_garagem">2</option>
+                          <option value="3" name="vagas_garagem">3</option>
+                          <option value="4" name="vagas_garagem">4</option>
                         </select>
                     </td>
                 </tr>
@@ -74,8 +74,8 @@
                     <td>Varanda</td>
                     <td>
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="varanda">
-                          <option value="Sim">Sim</option>
-                          <option value="Não">Não</option>
+                          <option value="S" name="varanda">Sim</option>
+                          <option value="N" name="varanda">Não</option>
                         </select>
                     </td>
                 </tr>
@@ -84,7 +84,7 @@
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" accept="image/*" type="file" id="formFile1">
+                      <input class="form-control" accept="image/*" type="file" id="formFile1" name="image1">
                     </div>
                   </td>
                 </tr>
@@ -93,7 +93,7 @@
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" accept="image/*" id="formFile2">
+                      <input class="form-control" type="file" accept="image/*" id="formFile2" name="image2">
                     </div>
                   </td>
                 </tr>
@@ -102,7 +102,7 @@
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" accept="image/*" id="formFile3">
+                      <input class="form-control" type="file" accept="image/*" id="formFile3" name="image3">
                     </div>
                   </td>
                 </tr>
@@ -111,7 +111,7 @@
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" accept="image/*" id="formFile4">
+                      <input class="form-control" type="file" accept="image/*" id="formFile4" name="image4">
                     </div>
                   </td>
                 </tr>
@@ -120,7 +120,7 @@
                   <td>
                     <div class="mb-3">
                       <label for="formFile" class="form-label"></label>
-                      <input class="form-control" type="file" accept="image/*" id="formFile5">
+                      <input class="form-control" type="file" accept="image/*" id="formFile5" name="image5">
                     </div>
                   </td>
                 </tr>
@@ -128,42 +128,43 @@
                     <td>Tipo de Contrato</td>
                     <td>
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="tipo_contrato">
-                          <option value="Venda">Venda</option>
-                          <option value="Aluguel">Aluguel</option>
+                          <option value="V" name="tipo_contrato">Venda</option>
+                          <option value="A" name="tipo_contrato">Aluguel</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>Estado</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="tipo_contrato">
-                          <option value="SP">São Paulo</option>
-                      <option value="AC">Acre</option>
-                      <option value="AL">Alagoas</option>
-                      <option value="AP">Amapá</option>
-                      <option value="AM">Amazonas</option>
-                      <option value="BA">Bahia</option>
-                      <option value="CE">Ceará</option>
-                      <option value="DF">Distrito Federal</option>
-                      <option value="ES">Espírito Santo</option>
-                      <option value="GO">Goiás</option>
-                      <option value="MA">Maranhão</option>
-                      <option value="MT">Mato Grosso</option>
-                      <option value="MS">Mato Grosso do Sul</option>
-                      <option value="MG">Minas Gerais</option>
-                      <option value="PA">Pará</option>
-                      <option value="PB">Paraíba</option>
-                      <option value="PR">Paraná</option>
-                      <option value="PE">Pernambuco</option>
-                      <option value="PI">Piauí</option>
-                      <option value="RJ">Rio de Janeiro</option>
-                      <option value="RN">Rio Grande do Norte</option>
-                      <option value="RS">Rio Grande do Sul</option>
-                      <option value="RO">Rondônia</option>
-                      <option value="RR">Roraima</option>
-                      <option value="SC">Santa Catarina</option>
-                      <option value="SE">Sergipe</option>
-                      <option value="TO">Tocantins</option>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="estado">
+                            <option value="SP" name="estado">São Paulo</option>
+                          <option value="AC" name="estado">Acre</option>
+                          <option value="AL" name="estado">Alagoas</option>
+                          <option value="AP" name="estado">Amapá</option>
+                          <option value="AM" name="estado">Amazonas</option>
+                          <option value="BA" name="estado">Bahia</option>
+                          <option value="CE" name="estado">Ceará</option>
+                          <option value="DF" name="estado">Distrito Federal</option>
+                          <option value="ES" name="estado">Espírito Santo</option>
+                          <option value="GO" name="estado">Goiás</option>
+                          <option value="MA" name="estado">Maranhão</option>
+                          <option value="MT" name="estado">Mato Grosso</option>
+                          <option value="MS" name="estado">Mato Grosso do Sul</option>
+                          <option value="MG" name="estado">Minas Gerais</option>
+                          <option value="PA" name="estado">Pará</option>
+                          <option value="PB" name="estado">Paraíba</option>
+                          <option value="PR" name="estado">Paraná</option>
+                          <option value="PE" name="estado">Pernambuco</option>
+                          <option value="PI" name="estado">Piauí</option>
+                          <option value="RJ" name="estado">Rio de Janeiro</option>
+                          <option value="RN" name="estado">Rio Grande do Norte</option>
+                          <option value="RS" name="estado">Rio Grande do Sul</option>
+                          <option value="RO" name="estado">Rondônia</option>
+                          <option value="RR" name="estado">Roraima</option>
+                          <option value="SC" name="estado">Santa Catarina</option>
+                          <option value="SE" name="estado">Sergipe</option>
+                          <option value="TO" name="estado">Tocantins</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -181,9 +182,9 @@
                 <tr>
                     <td>Condição</td>
                     <td>
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="codicao">
-                          <option value="novo">Novo</option>
-                          <option value="usado">Usado</option>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" name="condicao">
+                          <option value="N" name="condicao">Novo</option>
+                          <option value="U" name="condicao">Usado</option>
                         </select>
                     </td>
                 </tr>
