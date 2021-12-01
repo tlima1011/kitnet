@@ -98,5 +98,5 @@ def cadastro_cliente(request):
 def lista_cliente(request):
     usuario = request.user
     cliente = Cliente.objects.filter(usuario=usuario)
-    dados = {'cliente':cliente}
-    return render(request, 'imovel.html', dados)
+    dados = {'cliente': cliente}
+    return render(request, 'cliente.html', dados)

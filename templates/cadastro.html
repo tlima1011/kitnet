@@ -1,6 +1,12 @@
 {% extends "model-page.html" %}
 {% block content %}
-<form action="submit" method="POST"> {% csrf_token %}
+        <a href="novo_cliente/">
+            <button type="button" class="button button1">Novo Cliente</button>
+        </a>
+        <a href="lista_cliente/">
+            <button type="button" class="button button1">Lista de Clientes</button>
+        </a>
+        <form action="submit" method="POST"> {% csrf_token %}
         <div align="center">
           <h1>Cadastro de Imóveis</h1>
           <table style="font-size: 20px">

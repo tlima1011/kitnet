@@ -19,6 +19,10 @@ table, td, tr{
    font-size: 20px;
 }
 
+th{
+    text-align:center; 
+}
+
 .button {
   background-color: #FFFFE0; /* Green */
   border: none;
