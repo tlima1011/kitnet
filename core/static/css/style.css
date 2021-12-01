@@ -17,10 +17,15 @@ footer{
 table, td, tr{
    font-family: "Verdade", "Arial", "sans-serif";
    font-size: 20px;
+   border-bottom: 1px solid #ddd;
 }
 
 th{
-    text-align:center; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #FFEFD5;
+    color: black;
 }
 
 .button {

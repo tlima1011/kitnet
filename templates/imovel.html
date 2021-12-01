@@ -10,27 +10,33 @@
         <a href="lista_cliente/">
             <button type="button" class="button button1">Lista de Clientes</button>
         </a>
+        <br><br>
+        <div align="center">
         <h2>Imoveis Cadastrados</h2>
-        <table style="font-size: 20px">
-            <th>Nome</th>
-            <th>Data - Hora Inclusão</th>
-            <th>Tipo Contrato</th>
-            <th>Cidade</th>
-            <th>Estado</th>
-            <th>Valor R$</th>
-            <th>Condição</th>
-            {% for im in imovel %}
-            <tr>
-                <td>{{ im.nome }}</td>
-                <td>{{ im.get_data_inclusao}}</td>
-                <td>{{ im.tipo_contrato}}</td>
-                <td>{{ im.cidade }}</td>
-                <td>{{ im.estado }}</td>
-                <td>{{ im.valor }}</td>
-                <td>{{ im.condicao }}</td>
-            </tr>
-            {% endfor%}
-        </table>
+        <hr>
+            <table style="font-size: 20px">
+                <tr>
+                    <th>Nome</th>
+                    <th>Data - Hora Inclusão</th>
+                    <th>Tipo Contrato</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>Valor R$</th>
+                    <th>Condição</th>
+                </tr>
+                {% for im in imovel %}
+                <tr>
+                    <td>{{ im.nome }}</td>
+                    <td>{{ im.get_data_inclusao}}</td>
+                    <td>{{ im.tipo_contrato}}</td>
+                    <td>{{ im.cidade }}</td>
+                    <td>{{ im.estado }}</td>
+                    <td>{{ im.valor }}</td>
+                    <td>{{ im.condicao }}</td>
+                </tr>
+                {% endfor%}
+            </table>
+        </div>
     </div>
     <!--{%include "model-footer.html" %}-->
 {% endblock%}
