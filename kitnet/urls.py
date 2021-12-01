@@ -26,10 +26,10 @@ urlpatterns = [
     path('imovel/cadastro/', views.cadastro),
     path('imovel/cadastro/submit', views.submit_cadastro_imovel),
     path('imovel/novo_cliente/', views.cadastro_cliente),
+    path('imovel/lista_cliente/',views.lista_cliente),
     path('', RedirectView.as_view(url='/imovel/')),
     path('login/', views.login_user),
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user)
-]
-if settings.DEBUG: # new
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

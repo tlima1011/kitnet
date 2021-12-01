@@ -7,13 +7,10 @@
         <a href="novo_cliente/">
             <button type="button" class="button button1">Novo Cliente</button>
         </a>
-        <a href="lista_cliente/">
-            <button type="button" class="button button1">Lista de Clientes</button>
-        </a>
-        <h2>Imoveis Cadastrados</h2>
+        <h2>Clientes Cadastrados</h2>
         <ul style="font-size: 18px">
-            {% for im in imovel %}
-                <li>{{ im.nome }} - {{ im.get_data_inclusao}}</li>
+            {% for c in cliente %}
+                <li>{{ c.nome }}</li>
             {% endfor%}
         </ul>
     </div>

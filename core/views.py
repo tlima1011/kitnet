@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from core.models import Imovel
+from core.models import Imovel, Cliente
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -92,3 +92,11 @@ def submit_cadastro_imovel(request):
 @login_required(login_url='/login/')
 def cadastro_cliente(request):
     return render(request, 'novo_cliente.html')
+
+
+@login_required(login_url='/login/')
+def lista_cliente(request):
+    usuario = request.user
+    cliente = Cliente.objects.filter(usuario=usuario)
+    dados = {'cliente':cliente}
+    return render(request, 'imovel.html', dados)
