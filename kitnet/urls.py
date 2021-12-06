@@ -26,6 +26,7 @@ urlpatterns = [
     path('imovel/cadastro/', views.cadastro),
     path('imovel/cadastro/submit', views.submit_cadastro_imovel),
     path('imovel/cadastro/delete/<int:id_imovel>/', views.delete_imovel),
+    path('imovel/altera/', views.alterarImovel),
     #path('produto/cadastro/delete/<int:id_produto>/', views.delete_produto),
     path('novo_cliente/', views.cadastro_cliente),
     path('imovel/lista_cliente/', views.lista_cliente),

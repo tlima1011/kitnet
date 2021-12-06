@@ -42,6 +42,15 @@ def cadastro(request):
 
 
 @login_required(login_url='/login/')
+def alterarImovel(request):
+    id_imovel = request.GET.get('id')
+    dados = {}
+    if id_imovel:
+        dados['imovel'] = Imovel.objects.get(id=id_imovel)
+    return render( request, 'altera.html', dados)
+
+
+@login_required(login_url='/login/')
 def submit_cadastro_imovel(request):
     if request.POST:
         nome = request.POST.get('nome')
