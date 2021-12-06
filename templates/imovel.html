@@ -15,26 +15,35 @@
         <h2>Imoveis Cadastrados</h2>
         <hr>
             <table style="font-size: 20px">
-                <tr>
-                    <th>Nome</th>
-                    <th>Data - Hora Inclusão</th>
-                    <th>Tipo Contrato</th>
-                    <th>Cidade</th>
-                    <th>Estado</th>
-                    <th>Valor R$</th>
-                    <th>Condição</th>
-                </tr>
-                {% for im in imovel %}
-                <tr>
-                    <td>{{ im.nome }}</td>
-                    <td>{{ im.get_data_inclusao}}</td>
-                    <td>{{ im.tipo_contrato}}</td>
-                    <td>{{ im.cidade }}</td>
-                    <td>{{ im.estado }}</td>
-                    <td>{{ im.valor }}</td>
-                    <td>{{ im.condicao }}</td>
-                </tr>
-                {% endfor%}
+                <tbody>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Data - Hora Inclusão</th>
+                                <th>Tipo Contrato</th>
+                                <th>Cidade</th>
+                                <th>Estado</th>
+                                <th>Valor</th>
+                                <th>Condição</th>
+                            </tr>
+                        </thead>
+                    <td>
+                    {% for im in imovel %}
+                    <tr>
+                        <td>{{ im.nome }}</td>
+                        <td>{{ im.get_data_inclusao}}</td>
+                        <td>{{ im.tipo_contrato}}</td>
+                        <td>{{ im.cidade }}</td>
+                        <td>{{ im.estado }}</td>
+                        <td>R${{ im.valor }}</td>
+                        <td>{{ im.condicao }}</td>
+                        <td>
+                            <a href="cadastro/delete/{{ im.id }}/"><button type="button" class="btn btn-outline-danger">Excluir</button></a>
+                        </td>
+                    </tr>
+                    {% endfor%}
+                    </td>
+                </tbody>
             </table>
         </div>
     </div>

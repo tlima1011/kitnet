@@ -85,7 +85,15 @@ def submit_cadastro_imovel(request):
                                 condicao=condicao,
                                 usuario=usuario
                               )
-        return redirect('/')
+    return redirect('/')
+
+
+@login_required(login_url='/login/')
+def delete_imovel(request, id_imovel):
+    usuario = request.user
+    imovel = Imovel.objects.get(id=id_imovel)
+    if usuario == imovel.usuario:
+        imovel.delete()
     return redirect('/')
 
 

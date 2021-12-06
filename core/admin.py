@@ -4,7 +4,7 @@ from core.models import Imovel, Cliente
 
 
 class ImovelAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'metros', 'dormitorios', 'garagem', 'vagas_garagem', 'varanda', 'tipo_contrato', 'valor', 'condicao')
+    list_display = ('id','nome', 'metros', 'dormitorios', 'garagem', 'vagas_garagem', 'varanda', 'tipo_contrato', 'valor', 'condicao')
     #search_fields = ('nome', 'metros', 'dormitorios', 'garagem', 'vagas_garagem', 'varanda', 'tipo_contrato', 'valor', 'condicao')
     list_filter = ('usuario', )
 
