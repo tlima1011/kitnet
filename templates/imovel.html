@@ -30,7 +30,7 @@
                     <td>
                     {% for im in imovel %}
                     <tr>
-                            <td><a href="altera/?id={{ im.id }}">{{ im.nome }}</a></td>
+                            <td><a href="altera/?id={{ im.id }}" class="link-info">{{ im.nome }}</a></td>
                             <td>{{ im.get_data_inclusao}}</td>
                             <td>{{ im.tipo_contrato}}</td>
                             <td>{{ im.cidade }}</td>

@@ -70,21 +70,7 @@ th{
   font-weight: bold;
 }
 
-a {
-  color: blue;
-  font-family: "Verdana";
-  text-decoration: none;
-}
 
-a:visited {
-  color: blue;
-
-}
-
-a:hover {
-  color: rgba(255, 99, 71);
-  text-decoration: underline;
-}
 
 
 
